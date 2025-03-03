@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizador de Productos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Cotizador de Productos</h1>
+    
+    <form id="cotizadorForm">
+        <label for="productName">Nombre del Producto:</label>
+        <input type="text" id="productName" required>
+        
+        <label for="quantity">Cantidad:</label>
+        <input type="number" id="quantity" required>
+        
+        <label for="weight">Peso del Producto (kg):</label>
+        <input type="number" id="weight" step="0.1" required>
+        
+        <label for="originCountry">País de Origen:</label>
+        <select id="originCountry" required>
+            <option value="">Selecciona un país</option>
+            <option value="Mexico">México</option>
+            <option value="USA">Estados Unidos</option>
+            <option value="China">China</option>
+            <option value="Germany">Alemania</option>
+        </select>
+        
+        <button type="submit">Generar Cotización</button>
+    </form>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script src="cotizador.js"></script>
+
+</body>
+</html>
